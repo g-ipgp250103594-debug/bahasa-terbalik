@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bahasa Terbalik</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#EBD9FF,#C8A2FF,#FFD6EC);
+}
+
+header{
+    background:#5A189A;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+header h1{
+    margin:0;
+    font-size:42px;
+}
+
+header p{
+    font-size:20px;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    margin:25px 0;
+    box-shadow:0 6px 15px rgba(0,0,0,.2);
+}
+
+h2{
+    color:#6A0DAD;
+}
+
+button{
+    background:#9D4EDD;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#5A189A;
+}
+
+.example{
+    background:#F8EDFF;
+    padding:15px;
+    border-radius:15px;
+    margin-top:15px;
+}
+
+.quiz{
+    background:#F3E8FF;
+    padding:20px;
+    border-radius:15px;
+}
+
+.result{
+    margin-top:15px;
+    font-weight:bold;
+    color:#5A189A;
+    font-size:18px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#5A189A;
+    color:white;
+    margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🌸 Bahasa Terbalik 🌸</h1>
+
+<p>Bercakap dengan Santun, Menjaga Hati Orang Lain</p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>📖 Apa Itu Bahasa Terbalik?</h2>
+
+<p>
+Bahasa terbalik ialah cara bercakap yang membawa maksud
+<strong>bertentangan</strong> daripada perkataan yang diucapkan.
+</p>
+
+<button onclick="papar()">Klik untuk Lihat Contoh</button>
+
+<div id="contoh" class="example" style="display:none;">
+
+<p><b>Situasi:</b> Bilik sangat bersepah.</p>
+
+<p><b>Ibu berkata:</b></p>
+
+<p>"Wah, kemas betul bilik ini!"</p>
+
+<p><b>Maksud sebenar:</b></p>
+
+<p>Ibu menyuruh anak mengemas bilik.</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>🎯 Tujuan Bahasa Terbalik</h2>
+
+<ul>
+
+<li>🌸 Menegur dengan sopan.</li>
+
+<li>💜 Menjaga perasaan orang lain.</li>
+
+<li>🤝 Mengelakkan pergaduhan.</li>
+
+<li>😊 Memberi nasihat secara berhemah.</li>
+
+<li>💬 Menjadikan percakapan lebih santun.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>📱 Bijak Berkata di Media Sosial</h2>
+
+<p>
+
+❌ "Bijaknya awak kongsi berita palsu!"
+
+</p>
+
+<p>
+
+✅ "Mungkin kita boleh semak dahulu maklumat ini."
+
+</p>
+
+<p>
+
+Sentiasa gunakan bahasa yang sopan supaya orang lain tidak tersinggung.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>🧠 Kuiz Ringkas</h2>
+
+<div class="quiz">
+
+<p>
+
+Apakah maksud bahasa terbalik?
+
+</p>
+
+<input type="radio" name="quiz" value="1">
+
+Bahasa yang membawa maksud sebenar.
+
+<br><br>
+
+<input type="radio" name="quiz" value="2">
+
+Bahasa yang membawa maksud bertentangan.
+
+<br><br>
+
+<button onclick="semak()">
+
+Semak Jawapan
+
+</button>
+
+<div id="markah" class="result"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+💜 Belajarlah Bertutur dengan Santun 💜
+
+</footer>
+
+<script>
+
+function papar(){
+
+document.getElementById("contoh").style.display="block";
+
+}
+
+function semak(){
+
+let jawapan=document.getElementsByName("quiz");
+
+let betul=false;
+
+for(let i=0;i<jawapan.length;i++){
+
+if(jawapan[i].checked && jawapan[i].value=="2"){
+
+betul=true;
+
+}
+
+}
+
+if(betul){
+
+document.getElementById("markah").innerHTML="🎉 Tahniah! Jawapan anda betul!";
+
+}else{
+
+document.getElementById("markah").innerHTML="😊 Cuba lagi ya!";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
